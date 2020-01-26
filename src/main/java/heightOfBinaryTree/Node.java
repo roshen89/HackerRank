@@ -1,4 +1,4 @@
-package HeightOfBinaryTree;
+package heightOfBinaryTree;
 
 import java.util.Scanner;
 
@@ -6,15 +6,16 @@ import java.util.Scanner;
  * @author ROSH - 1/22/2020
  */
 public class Node {
-    int data;
-    Node left;
-    Node right;
 
-    Node(int data) {
-      this.data = data;
-      left = null;
-      right = null;
-    }
+  int data;
+  Node left;
+  Node right;
+
+  Node(int data) {
+    this.data = data;
+    left = null;
+    right = null;
+  }
 
 
   public static int height(Node root) {
@@ -26,11 +27,11 @@ public class Node {
   }
 
   public static Node insert(Node root, int data) {
-    if(root == null) {
+    if (root == null) {
       return new Node(data);
     } else {
       Node cur;
-      if(data <= root.data) {
+      if (data <= root.data) {
         cur = insert(root.left, data);
         root.left = cur;
       } else {
@@ -45,7 +46,7 @@ public class Node {
     Scanner scan = new Scanner(System.in);
     int t = scan.nextInt();
     Node root = null;
-    while(t-- > 0) {
+    while (t-- > 0) {
       int data = scan.nextInt();
       root = insert(root, data);
     }
