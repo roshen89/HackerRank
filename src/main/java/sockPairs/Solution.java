@@ -24,7 +24,6 @@ public class Solution {
         colors.remove(ar[i]);
       }
     }
-
     System.out.println(pairs);
     return pairs;
   }
